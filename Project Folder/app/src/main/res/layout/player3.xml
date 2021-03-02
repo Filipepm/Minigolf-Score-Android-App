@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/shape"
+        android:layout_width="0dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginLeft="41dp"
+        android:layout_marginTop="313dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginRight="41dp"
+        android:background="@drawable/box"
+        android:color="#Ff000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/player3name"
+        android:layout_width="138dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Filipe"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/shape"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/shape" />
+
+    <EditText
+        android:id="@+id/hole3score"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="7dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/shape"
+        app:layout_constraintEnd_toStartOf="@+id/breaker"
+        app:layout_constraintStart_toEndOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/total1score"
+        android:layout_width="0dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginRight="43dp"
+        android:text="56"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/breaker"
+        app:layout_constraintTop_toTopOf="@+id/breaker" />
+
+    <TextView
+        android:id="@+id/breaker"
+        android:layout_width="15dp"
+        android:layout_height="54dp"
+        android:text="TextView"
+        android:textSize="36sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/hole3score"
+        app:layout_constraintEnd_toStartOf="@+id/total1score"
+        app:layout_constraintStart_toEndOf="@+id/hole3score"
+        tools:text="|" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="29dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/shape"
+        app:layout_constraintEnd_toStartOf="@+id/hole3score"
+        app:layout_constraintStart_toEndOf="@+id/player3name"
+        app:layout_constraintTop_toTopOf="@+id/shape"
+        tools:srcCompat="@tools:sample/avatars" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
