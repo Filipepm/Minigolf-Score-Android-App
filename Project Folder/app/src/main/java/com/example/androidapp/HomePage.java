@@ -21,6 +21,14 @@ public class HomePage extends AppCompatActivity {
                 startActivity(new Intent(HomePage.this, NewGame.class));
             }
         });
+
+        Button btnSaved = findViewById(R.id.saved_game);
+        btnNew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomePage.this, SavedGame.class));
+            }
+        });
     }
 
 }
