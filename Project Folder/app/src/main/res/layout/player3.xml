@@ -15,7 +15,7 @@
         android:layout_marginEnd="41dp"
         android:layout_marginRight="41dp"
         android:background="@drawable/box"
-        android:color="#Ff000"
+        android:color="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
