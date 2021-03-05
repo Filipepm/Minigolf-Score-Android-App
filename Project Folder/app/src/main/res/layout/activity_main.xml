@@ -8,6 +8,12 @@
 
     <include
         android:id="@+id/player1"
+        layout="@layout/holeselection"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <include
+        android:id="@+id/player1"
         layout="@layout/player1"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
@@ -27,7 +33,17 @@
     <include
         android:id="@+id/exitbutton"
         layout="@layout/exitbutton"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteX="180dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="148dp"
+        android:layout_height="81dp"
+        android:text="Next Hole"
+        android:textColor="#000000"
+        app:backgroundTint="#8F8F8F"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="485dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
