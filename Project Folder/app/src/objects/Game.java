@@ -3,14 +3,16 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 import Player.java;
 
 class Game implements Serializable{
 
 public Game(){
-    int gameID;
     int maxPlayerID = 0;
+    int gameID = getMaxGameID()+1;
     String gameName;
     ArrayList<Player> players = new ArrayList<Player>;
 }
@@ -41,16 +43,23 @@ public Game(){
 
     //TODO: implement saveGame()
     public void saveGame(){
-
+        File file = new File(context.getFilesDir() + gameID.toString())//TODO: determine file extension
+        //TODO: serialize to file
     }
 
     //TODO: implement loadGame()
-    public Game loadGame(){
-        return null;
+    public Game loadGame(int gameID){
+        return new Game;
     }
 
-    private void readObject(){
-
+    private int getMaxGameID(){
+        File directory = new File(context.getFilesDir());
+        ArrayList<String> filenames = new ArrayList<String>(Arrays.asList(directory.list()));
+        ArrayList<Integer> filenumbers = new Arraylist<Integer>;
+        for(String filename : filenames){
+            int filenumber = Integer.parseInt(filename); //TODO: regex out file extensions
+            filenumbers.add(filenumber);
+        return(Collections.max(filenumbers))
+        }
     }
-    
 }
