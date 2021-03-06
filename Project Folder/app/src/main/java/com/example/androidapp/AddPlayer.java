@@ -22,7 +22,7 @@ public class AddPlayer extends AppCompatActivity {
         setContentView(R.layout.new_player);
 
         gridView = findViewById(R.id.gridview);
-        gridview.setAdapter(new ColorAdapter(this));
+        gridview.setAdapter(new ColorAdapter(this)); 
 
         playerName = findViewById(R.id.PlayerNameInput); 
 
