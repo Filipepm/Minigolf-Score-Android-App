@@ -11,32 +11,28 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class Hole2 extends AppCompatActivity {
 
     EditText hole1score, hole2score;
-    TextView hole1total, hole2total;
+    TextView hole1total, hole2total, holenumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.hole2);
 
         hole1score = (EditText) findViewById(R.id.hole1score);
         hole1total = (TextView) findViewById(R.id.total1score);
         hole2score = (EditText) findViewById(R.id.hole2score);
         hole2total = (TextView) findViewById(R.id.total2score);
+        holenumber = (TextView) findViewById(R.id.holenumber);
 
+        hole1total.setText("2");
+        hole2total.setText("1");
+        holenumber.setText("2");
 
         hole1score.addTextChangedListener(scoretext);
-        hole2score.addTextChangedListener(scoretext);
-
-        Button btnNew = findViewById(R.id.nexthole);
-        btnNew.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Hole2.class));
-            }
-        });
+        hole2score.addTextChangedListener(scoretext1);
     }
 
     private TextWatcher scoretext = new TextWatcher() {
@@ -47,15 +43,26 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
-            hole1score = (EditText) findViewById(R.id.hole1score);
-            String holescore = hole1score.getText().toString().trim();
-            hole1total = (TextView) findViewById(R.id.total1score);
-            hole1total.setText(holescore);
+            hole1total.setText("4");
 
-            hole2score = (EditText) findViewById(R.id.hole2score);
-            String holescore2 = hole2score.getText().toString().trim();
-            hole2total = (TextView) findViewById(R.id.total2score);
-            hole2total.setText(holescore2);
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+
+        }
+    };
+
+    private TextWatcher scoretext1 = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            hole2total.setText("3");
+
         }
 
         @Override
