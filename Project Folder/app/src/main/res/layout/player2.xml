@@ -15,7 +15,8 @@
         android:layout_marginEnd="41dp"
         android:layout_marginRight="41dp"
         android:background="@drawable/box"
-        android:color="@color/red"
+        android:color="@color/purple_200"
+        android:text="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +30,7 @@
         android:layout_marginLeft="56dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Filipe"
+        android:text="Sarah"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/shape"
         app:layout_constraintEnd_toStartOf="@+id/imageView"
@@ -37,26 +38,25 @@
         app:layout_constraintTop_toTopOf="@+id/shape" />
 
     <EditText
-        android:id="@+id/hole1score"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:id="@+id/hole2score"
+        android:layout_width="47dp"
+        android:layout_height="57dp"
         android:layout_marginBottom="7dp"
         android:ems="10"
         android:inputType="number"
-        android:text="1"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/shape"
         app:layout_constraintEnd_toStartOf="@+id/breaker"
         app:layout_constraintStart_toEndOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/total1score"
-        android:layout_width="0dp"
-        android:layout_height="27dp"
+        android:id="@+id/total2score"
+        android:layout_width="37dp"
+        android:layout_height="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="43dp"
         android:layout_marginRight="43dp"
-        android:text="56"
+        android:text="0"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/breaker"
@@ -64,14 +64,13 @@
 
     <TextView
         android:id="@+id/breaker"
-        android:layout_width="15dp"
-        android:layout_height="54dp"
-        android:text="TextView"
+        android:layout_width="21dp"
+        android:layout_height="63dp"
+        android:text="|"
         android:textSize="36sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/hole1score"
-        app:layout_constraintEnd_toStartOf="@+id/total1score"
-        app:layout_constraintStart_toEndOf="@+id/hole1score"
-        tools:text="|" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/hole2score"
+        app:layout_constraintEnd_toStartOf="@+id/total2score"
+        app:layout_constraintStart_toEndOf="@+id/hole2score" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -80,7 +79,7 @@
         android:layout_marginEnd="80dp"
         android:layout_marginRight="80dp"
         app:layout_constraintBottom_toBottomOf="@+id/shape"
-        app:layout_constraintEnd_toStartOf="@+id/hole1score"
+        app:layout_constraintEnd_toStartOf="@+id/hole2score"
         app:layout_constraintStart_toEndOf="@+id/player2name"
         app:layout_constraintTop_toTopOf="@+id/shape"
         tools:srcCompat="@tools:sample/avatars" />
