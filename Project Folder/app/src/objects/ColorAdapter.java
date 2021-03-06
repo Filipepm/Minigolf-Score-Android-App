@@ -13,7 +13,7 @@ public class ColorAdapter extends BaseAdapter {
 	private Context mContext;
    
    // Constructor
-   public ImageAdapter(Context c) {
+   public ColorAdapter(Context c) {
       mContext = c;
    }
    
