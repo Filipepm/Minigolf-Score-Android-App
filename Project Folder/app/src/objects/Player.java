@@ -45,9 +45,4 @@ class Player implements Serializable{
             scores.ensureCapacity(holeID);
         this.scores.set(holeID-1, score);
     }
-
-    private void readObject(){
-        
-    }
-
 }
