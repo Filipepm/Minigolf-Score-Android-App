@@ -1,4 +1,4 @@
-/**package com.example.androidapp;
+package com.example.androidapp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -55,4 +55,3 @@ public class AddPlayer extends AppCompatActivity {
     }
 
 }
-**/
