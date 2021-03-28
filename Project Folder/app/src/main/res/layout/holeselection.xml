@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/new_saved_background">
 
     <TextView
         android:id="@+id/holenumber"
@@ -12,7 +13,9 @@
         android:layout_marginEnd="184dp"
         android:layout_marginRight="184dp"
         android:text="1"
+        android:fontFamily="@font/varela_regular"
         android:textSize="80sp"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button3"
         app:layout_constraintTop_toTopOf="@+id/textView2" />
@@ -23,23 +26,25 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:layout_marginLeft="64dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="150dp"
         android:layout_marginBottom="22dp"
         android:text="Hole Number"
+        android:fontFamily="@font/varela_regular"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintStart_toStartOf="@+id/button3"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="90dp"
+        android:layout_height="36dp"
         android:layout_marginStart="98dp"
         android:layout_marginLeft="98dp"
         android:layout_marginBottom="597dp"
         app:backgroundTint="#00FFFFFF"
         app:icon="@mipmap/ic_launcher_foreground"
-        app:iconTint="#000000"
+        app:iconTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/holenumber"
         app:layout_constraintStart_toStartOf="parent"

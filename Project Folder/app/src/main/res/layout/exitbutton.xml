@@ -14,8 +14,8 @@
         android:text="Button"
         app:backgroundTint="#00FFFFFF"
         app:backgroundTintMode="add"
-        app:icon="@android:drawable/ic_menu_close_clear_cancel"
-        app:iconTint="@color/black"
+        app:icon="@android:drawable/ic_menu_home"
+        app:iconTint="#FFFFFF"
         tools:layout_editor_absoluteX="353dp"
         tools:layout_editor_absoluteY="-2dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
