@@ -9,7 +9,7 @@ class Player implements Serializable{
         int playerID;
         String playerName;
         Color playerColor;
-        ArrayList<Integer> scores = new ArrayList<Integer>;
+        ArrayList<Integer> scores = new ArrayList<Integer>();
     }
 
     public int getPlayerID(){

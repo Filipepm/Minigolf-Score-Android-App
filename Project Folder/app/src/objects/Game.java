@@ -14,7 +14,7 @@ public Game(){
     int maxPlayerID = 0;
     int gameID = getMaxGameID()+1;
     String gameName;
-    ArrayList<Player> players = new ArrayList<Player>;
+    ArrayList<Player> players = new ArrayList<Player>();
 }
 
     public String getGameName(){
@@ -43,23 +43,23 @@ public Game(){
 
     //TODO: implement saveGame()
     public void saveGame(){
-        File file = new File(context.getFilesDir() + gameID.toString())//TODO: determine file extension
+        File file = new File(context.getFilesDir() + gameID.toString());//TODO: determine file extension
         //TODO: serialize to file
     }
 
     //TODO: implement loadGame()
     public Game loadGame(int gameID){
-        return new Game;
+        return new Game();
     }
 
     private int getMaxGameID(){
         File directory = new File(context.getFilesDir());
         ArrayList<String> filenames = new ArrayList<String>(Arrays.asList(directory.list()));
-        ArrayList<Integer> filenumbers = new Arraylist<Integer>;
+        ArrayList<Integer> filenumbers = new Arraylist<Integer>();
         for(String filename : filenames){
             int filenumber = Integer.parseInt(filename); //TODO: regex out file extensions
             filenumbers.add(filenumber);
-        return(Collections.max(filenumbers))
+        return(Collections.max(filenumbers));
         }
     }
 }
