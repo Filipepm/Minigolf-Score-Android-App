@@ -30,8 +30,10 @@ public class MainActivity extends AppCompatActivity {
         hole1score.addTextChangedListener(scoretext);
         hole2score.addTextChangedListener(scoretext);
 
-        Button btnNew = findViewById(R.id.nexthole);
-        btnNew.setOnClickListener(new View.OnClickListener() {
+        Button btnNext = findViewById(R.id.next_hole);
+        //TODO: implement prev hole button
+        Button btnPrev = findViewById(R.id.prev_hole);
+        btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, Hole2.class));
