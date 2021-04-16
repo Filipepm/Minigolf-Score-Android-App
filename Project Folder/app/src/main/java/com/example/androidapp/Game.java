@@ -1,21 +1,31 @@
+package com.example.androidapp;
+
 import android.graphics.Color;
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+
+import java.io.File;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.*;
 
-import Player.java;
+public class Game implements Serializable{
 
-class Game implements Serializable{
-
-public Game(){
-    int maxPlayerID = 0;
-    int gameID = getMaxGameID()+1;
+    int maxPlayerID;
+    int gameID;
     String gameName;
-    ArrayList<Player> players = new ArrayList<Player>();
-}
+    ArrayList<Player> players;
+
+    public Game() {
+        maxPlayerID = 0;
+        gameID = getMaxGameID()+1;
+        players = new ArrayList<Player>();
+    }
 
     public String getGameName(){
         return this.gameName;
@@ -26,17 +36,20 @@ public Game(){
     }
 
     public void addPlayer(String playerName, Color playerColor){
-        this.players.add(new Player(maxPlayerId++, playerName, playerColor));
+        this.players.add(new Player(maxPlayerID++, playerName, playerColor));
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public void removePlayer(int playerID){
-        players.remove(players.indexOf(players.stream().filter(player -> playerID.equals(player.getPlayerID()))).findFirst().orElse(null));
+        players.remove(players.indexOf(players.stream().filter(player -> (Integer)playerID.equals((Integer)player.getPlayerID()))).findFirst().orElse(null));
     }
 
-    public int getScore(int playerID, int holeID){
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public int getScore(int playerID, int holeID) {
         return(players.stream().filter(player -> playerID.equals(player.getPlayerID())).getScore(holeID));
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public void setScore(int playerID, int holeID, int score){
         players.stream().filter(player -> playerID.equals(player.getPlayerID())).setScore(holeID, score);
     }
@@ -55,7 +68,7 @@ public Game(){
     private int getMaxGameID(){
         File directory = new File(context.getFilesDir());
         ArrayList<String> filenames = new ArrayList<String>(Arrays.asList(directory.list()));
-        ArrayList<Integer> filenumbers = new Arraylist<Integer>();
+        ArrayList<Integer> filenumbers = new ArrayList<Integer>();
         for(String filename : filenames){
             int filenumber = Integer.parseInt(filename); //TODO: regex out file extensions
             filenumbers.add(filenumber);

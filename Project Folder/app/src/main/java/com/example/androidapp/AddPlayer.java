@@ -44,7 +44,7 @@ public class AddPlayer extends AppCompatActivity {
                 final Color playerColor = colorButtons();
 
                 //Player player = new Player (++playerIndex, Name, playerColor, playerScore);
-                Player player();
+                Player player = new Player();
 
                 Intent i = new Intent(AddPlayer.this, MainActivity.class);
                 startActivity(i);

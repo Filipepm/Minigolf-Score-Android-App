@@ -1,15 +1,26 @@
+package com.example.androidapp;
+
 import android.graphics.Color;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.util.ArrayList;
 
-class Player implements Serializable{
+public class Player implements Serializable{
 
-    public Player(){
-        int playerID;
-        String playerName;
-        Color playerColor;
-        ArrayList<Integer> scores = new ArrayList<Integer>();
+    int playerID;
+    String playerName;
+    Color playerColor;
+    ArrayList<Integer> scores;
+
+    public Player() {
+        scores = new ArrayList<Integer>();
+    }
+
+    public Player(int playerID, String playerName, Color playerColor) {
+        this.playerID = playerID;
+        this.playerName = playerName;
+        this.playerColor = playerColor;
     }
 
     public int getPlayerID(){
