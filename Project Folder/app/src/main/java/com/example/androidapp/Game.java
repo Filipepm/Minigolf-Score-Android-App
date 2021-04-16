@@ -3,6 +3,7 @@ package com.example.androidapp;
 import android.graphics.Color;
 import android.os.Build;
 
+import android.content.Context;
 import androidx.annotation.RequiresApi;
 
 import java.io.File;
@@ -14,7 +15,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.*;
 
-public class Game implements Serializable{
+public class Game implements Serializable {
 
     int maxPlayerID;
     int gameID;
@@ -39,9 +40,10 @@ public class Game implements Serializable{
         this.players.add(new Player(maxPlayerID++, playerName, playerColor));
     }
 
+    /*
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void removePlayer(int playerID){
-        players.remove(players.indexOf(players.stream().filter(player -> (Integer)playerID.equals((Integer)player.getPlayerID()))).findFirst().orElse(null));
+        players.remove(players.indexOf(players.stream().filter(player -> playerID.equals(player.getPlayerID()))).findFirst().orElse(null));
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -64,15 +66,15 @@ public class Game implements Serializable{
     public Game loadGame(int gameID){
         return new Game();
     }
-
-    private int getMaxGameID(){
-        File directory = new File(context.getFilesDir());
+    */
+    private int getMaxGameID() {
+        File directory = new File("./");
         ArrayList<String> filenames = new ArrayList<String>(Arrays.asList(directory.list()));
         ArrayList<Integer> filenumbers = new ArrayList<Integer>();
         for(String filename : filenames){
             int filenumber = Integer.parseInt(filename); //TODO: regex out file extensions
             filenumbers.add(filenumber);
-        return(Collections.max(filenumbers));
         }
+        return(Collections.max(filenumbers));
     }
 }
