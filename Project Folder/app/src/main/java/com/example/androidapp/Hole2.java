@@ -33,6 +33,14 @@ public class Hole2 extends AppCompatActivity {
 
         hole1score.addTextChangedListener(scoretext);
         hole2score.addTextChangedListener(scoretext1);
+
+        Button btnPrev = findViewById(R.id.prev_hole);
+        btnPrev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Hole2.this, MainActivity.class ));
+            }
+        });
     }
 
     private TextWatcher scoretext = new TextWatcher() {

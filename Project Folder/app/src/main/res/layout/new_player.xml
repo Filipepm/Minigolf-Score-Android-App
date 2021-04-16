@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/new_saved_background">
 
     <TextView
         android:id="@+id/NameLabel"
@@ -14,6 +15,7 @@
         android:layout_marginTop="88dp"
         android:text="Name: "
         android:textSize="18sp"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/NameInput"
         app:layout_constraintHorizontal_bias="0.255"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,9 +25,10 @@
         android:id="@+id/NameInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginRight="64dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:background="@color/white"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,37 +49,43 @@
             android:id="@+id/redButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Red" />
+            android:text="Red"
+            android:textColor="@color/white"/>
 
         <RadioButton
             android:id="@+id/orangeButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Orange" />
+            android:text="Orange"
+            android:textColor="@color/white"/>
 
         <RadioButton
             android:id="@+id/yellowButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Yellow" />
+            android:text="Yellow"
+            android:textColor="@color/white" />
 
         <RadioButton
             android:id="@+id/greenButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Green" />
+            android:text="Green"
+            android:textColor="@color/white"/>
 
         <RadioButton
             android:id="@+id/blueButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Blue" />
+            android:text="Blue"
+            android:textColor="@color/white"/>
 
         <RadioButton
             android:id="@+id/purpleButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Purple" />
+            android:text="Purple"
+            android:textColor="@color/white"/>
     </RadioGroup>
 
     <Button
@@ -85,6 +94,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="72dp"
         android:text="Submit"
+        android:backgroundTint="@color/purple_200"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -93,11 +104,12 @@
         android:id="@+id/ColorLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="84dp"
         android:text="Colors"
+        android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/NameInput" />
 </androidx.constraintlayout.widget.ConstraintLayout>
