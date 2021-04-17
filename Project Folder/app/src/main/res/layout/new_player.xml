@@ -39,7 +39,7 @@
         android:layout_width="350dp"
         android:layout_height="335dp"
         android:layout_marginBottom="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/SubmitButton"
+        app:layout_constraintBottom_toTopOf="@+id/NewPlayerSubmit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ColorLabel"
@@ -89,7 +89,7 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/SubmitButton"
+        android:id="@+id/NewPlayerSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="72dp"

@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.EditText;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ImageView;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,7 +32,7 @@ public class AddPlayer extends AppCompatActivity {
         green = (RadioButton) findViewById(R.id.greenButton);
         blue = (RadioButton) findViewById(R.id.blueButton);
         purple = (RadioButton) findViewById(R.id.purpleButton);
-        submit = (Button) findViewById(R.id.SubmitButton);
+        submit = (Button) findViewById(R.id.NewPlayerSubmit);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)
