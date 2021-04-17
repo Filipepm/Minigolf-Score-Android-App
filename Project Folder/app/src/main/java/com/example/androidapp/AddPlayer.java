@@ -19,6 +19,7 @@ public class AddPlayer extends AppCompatActivity {
     private RadioButton red, orange, yellow, green, blue, purple;
     int playerIndex = 0;
     int playerScore = 0;
+    Game game = new Game();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +42,21 @@ public class AddPlayer extends AppCompatActivity {
                 final String Name = playerName.getText().toString();
                 final Color playerColor = colorButtons();
 
-                //Player player = new Player (++playerIndex, Name, playerColor, playerScore);
+                //Player player = new Player (++playerIndex, Name, playerColor);
                 Player player = new Player();
 
-                Intent i = new Intent(AddPlayer.this, MainActivity.class);
+                player.setPlayerID(playerIndex);
+                player.setPlayerName(Name);
+                player.setColor(playerColor);
+
+                Intent i;
+
+                if (playerIndex <= game.maxPlayerID) {
+                    i = new Intent(AddPlayer.this, AddPlayer.class);
+                } else {
+                    i = new Intent(AddPlayer.this, MainActivity.class);
+                }
+
                 startActivity(i);
             }
         });

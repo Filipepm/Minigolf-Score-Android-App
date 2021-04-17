@@ -40,6 +40,10 @@ public class Game implements Serializable {
         this.players.add(new Player(maxPlayerID++, playerName, playerColor));
     }
 
+    public void setMaxPlayerID(int playerID) {
+        this.maxPlayerID = playerID;
+    }
+
     /*
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void removePlayer(int playerID){
