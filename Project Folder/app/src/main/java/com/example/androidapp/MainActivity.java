@@ -7,6 +7,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,15 +31,24 @@ public class MainActivity extends AppCompatActivity {
         hole1score.addTextChangedListener(scoretext);
         hole2score.addTextChangedListener(scoretext);
 
+        ImageButton btnAddPlayer = findViewById(R.id.add_player_btn);
+        btnAddPlayer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, AddPlayer.class));
+            }
+        });
+
         Button btnNext = findViewById(R.id.next_hole);
-        //TODO: implement prev hole button
-        Button btnPrev = findViewById(R.id.prev_hole);
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, Hole2.class));
             }
         });
+
+        //TODO: implement prev hole button
+        Button btnPrev = findViewById(R.id.prev_hole);
     }
 
     private TextWatcher scoretext = new TextWatcher() {
