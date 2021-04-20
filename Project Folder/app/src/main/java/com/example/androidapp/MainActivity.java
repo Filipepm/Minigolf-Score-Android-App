@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         btnAddPlayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Hole2.class));
+                startActivity(new Intent(MainActivity.this, AddPlayer.class));
             }
         });
 

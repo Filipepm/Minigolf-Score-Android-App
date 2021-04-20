@@ -50,12 +50,13 @@ public class AddPlayer extends AppCompatActivity {
                 player.setColor(playerColor);
 
                 Intent i;
+                i = new Intent(AddPlayer.this, Hole2.class);
 
-                if (playerIndex <= game.maxPlayerID) {
+              /*  if (playerIndex <= game.maxPlayerID) {
                     i = new Intent(AddPlayer.this, AddPlayer.class);
                 } else {
                     i = new Intent(AddPlayer.this, MainActivity.class);
-                }
+                }*/
 
                 startActivity(i);
             }
