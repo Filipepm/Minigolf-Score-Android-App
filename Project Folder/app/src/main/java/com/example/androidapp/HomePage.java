@@ -19,7 +19,7 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //startActivity(new Intent(HomePage.this, MainActivity.class));
-                startActivity(new Intent(HomePage.this, NewGame.class));
+                startActivity(new Intent(HomePage.this, MainActivity.class));
             }
         });
 
