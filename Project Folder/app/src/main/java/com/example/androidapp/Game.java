@@ -15,7 +15,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.*;
 
-public class Game implements Serializable {
+public class Game{
 
     int maxPlayerID;
     int gameID;
@@ -59,18 +59,23 @@ public class Game implements Serializable {
     public void setScore(int playerID, int holeID, int score){
         players.stream().filter(player -> playerID.equals(player.getPlayerID())).setScore(holeID, score);
     }
-
-    //TODO: implement saveGame()
-    public void saveGame(){
-        File file = new File(context.getFilesDir() + gameID.toString());//TODO: determine file extension
-        //TODO: serialize to file
-    }
-
-    //TODO: implement loadGame()
-    public Game loadGame(int gameID){
-        return new Game();
-    }
     */
+
+    public void saveGame(){
+        FileOutputStream fileStream = new FileOutputStream(this.gameID.toString() + ".ser");
+        ObjectOutputStream objectStream = new ObjectOutputStream(fileStream);
+        objectStream.writeObject(this);
+        objectStream.close();
+    }
+
+    public Game loadGame(int gameID){
+        FileInputStream fileStream = new FileInputStream(gameID.toString() + ".ser");
+        ObjectInputStream inputStream = new ObjectInputStream(fileStream);
+        Game loadedGame = inputStream.readObject();
+        os.close();
+        return loadedGame;
+    }
+    
     private int getMaxGameID() {
         File directory = new File("./");
         ArrayList<String> filenames = new ArrayList<String>(Arrays.asList(directory.list()));
