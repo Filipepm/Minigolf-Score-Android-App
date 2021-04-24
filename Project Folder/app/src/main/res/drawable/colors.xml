@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <resources>
-        <color android:name="gray">#eaeaea</color>
-        <color android:name="titlebackgroundcolor">#00abd7</color>
-        <color android:name="titlecolor">#666666</color>
-    </resources>
-</selector>
