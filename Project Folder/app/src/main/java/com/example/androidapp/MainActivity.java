@@ -1,9 +1,13 @@
 package com.example.androidapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,5 +28,21 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<String> arrayList = new ArrayList<String>();
         int listString = array[0];
         list.setText(String.valueOf(listString));
+
+        ImageButton btnAddPlayer = findViewById(R.id.add_player_btn);
+        btnAddPlayer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, AddPlayer.class));
+            }
+        });
+
+        Button btnNext = findViewById(R.id.next_hole);
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Hole2.class));
+            }
+        });
     }
 }
