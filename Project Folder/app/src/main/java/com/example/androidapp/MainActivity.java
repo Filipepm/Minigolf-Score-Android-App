@@ -23,13 +23,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.game);
         list = findViewById(R.id.hole1score);
         ArrayList<String> arrayList = new ArrayList<String>();
         int listString = array[0];
         list.setText(String.valueOf(listString));
 
-        ImageButton btnAddPlayer = findViewById(R.id.add_player_btn);
+        ImageButton btnAddPlayer = findViewById(R.id.add_player_btn2);
         btnAddPlayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

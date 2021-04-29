@@ -5,9 +5,12 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.EditText;
+import android.widget.ListView;
+import java.util.ArrayList;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +23,9 @@ public class AddPlayer extends AppCompatActivity {
     int playerIndex = 0;
     int playerScore = 0;
     Game game = new Game();
+    ArrayList<Player> playerList = game.players;
+    //Player[] playerList = new Player[game.getMaxPlayerID()];
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +41,9 @@ public class AddPlayer extends AppCompatActivity {
         purple = (RadioButton) findViewById(R.id.purpleButton);
         submit = (Button) findViewById(R.id.NewPlayerSubmit);
 
+        final ListView list = findViewById(R.id.playerlist);
+        //final ArrayAdapter<Player> adapter = new ArrayAdapter<>(AddPlayer.this, android.R.layout.simple, list);
+
         submit.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
@@ -42,15 +51,15 @@ public class AddPlayer extends AppCompatActivity {
                 final String Name = playerName.getText().toString();
                 final Color playerColor = colorButtons();
 
-                //Player player = new Player (++playerIndex, Name, playerColor);
-                Player player = new Player();
+                playerList.add(new Player (++playerIndex, Name, playerColor));
+                //Player player = new Player();
 
-                player.setPlayerID(playerIndex);
-                player.setPlayerName(Name);
-                player.setColor(playerColor);
+                //player.setPlayerID(playerIndex);
+                //player.setPlayerName(Name);
+                //player.setColor(playerColor);
 
                 Intent i;
-                i = new Intent(AddPlayer.this, Hole2.class);
+                i = new Intent(AddPlayer.this, MainActivity.class);
 
               /*  if (playerIndex <= game.maxPlayerID) {
                     i = new Intent(AddPlayer.this, AddPlayer.class);
@@ -78,7 +87,7 @@ public class AddPlayer extends AppCompatActivity {
         } else if (blue.isChecked()) {
             color = Color.valueOf(42, 144, 229);
         } else if (purple.isChecked()) {
-            color = Color.valueOf(112, 42, 29);
+            color = Color.valueOf(112, 42, 229);
         } else {
             color = Color.valueOf(255, 255, 255); //WHITE
         }
