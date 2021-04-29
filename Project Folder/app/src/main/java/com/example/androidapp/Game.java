@@ -7,6 +7,9 @@ import android.content.Context;
 import androidx.annotation.RequiresApi;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
@@ -61,18 +64,18 @@ public class Game{
     }
     */
 
-    public void saveGame(){
-        FileOutputStream fileStream = new FileOutputStream(this.gameID.toString() + ".ser");
+    public void saveGame() throws IOException {
+        FileOutputStream fileStream = new FileOutputStream(String.valueOf(this.gameID) + ".ser");
         ObjectOutputStream objectStream = new ObjectOutputStream(fileStream);
         objectStream.writeObject(this);
         objectStream.close();
     }
 
-    public Game loadGame(int gameID){
-        FileInputStream fileStream = new FileInputStream(gameID.toString() + ".ser");
+    public Game loadGame(int gameID) throws IOException, ClassNotFoundException {
+        FileInputStream fileStream = new FileInputStream(String.valueOf(gameID) + ".ser");
         ObjectInputStream inputStream = new ObjectInputStream(fileStream);
-        Game loadedGame = inputStream.readObject();
-        os.close();
+        Game loadedGame = (Game) inputStream.readObject();
+        inputStream.close();
         return loadedGame;
     }
     
