@@ -19,19 +19,19 @@ public class NewGame extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.new_game);
 
-        playerNum = (EditText) findViewById(R.id.PersonNumInput);
+        //playerNum = (EditText) findViewById(R.id.PersonNumInput);
         parNum = (EditText) findViewById(R.id.ParNumInput);
         submit = (Button) findViewById(R.id.NewGameSubmit);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Game game = new Game();
+
+                /*Game game = new Game();
 
                 String num = playerNum.getText().toString();
                 final int maxplayers = Integer.parseInt(num);
-                game.setMaxPlayerID(maxplayers);
-
+                game.setMaxPlayerID(maxplayers);*/
                 Intent i = new Intent(NewGame.this, EmptyGame.class);
                 startActivity(i);
             }

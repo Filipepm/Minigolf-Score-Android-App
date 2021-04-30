@@ -13,12 +13,13 @@
         android:layout_marginLeft="41dp"
         android:layout_marginEnd="41dp"
         android:layout_marginRight="41dp"
-        android:layout_marginBottom="304dp"
         android:background="@drawable/purpleplayerbox"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.678" />
 
     <TextView
         android:id="@+id/player2name"
@@ -38,7 +39,7 @@
         app:layout_constraintTop_toTopOf="@+id/shape" />
 
     <EditText
-        android:id="@+id/hole2score"
+        android:id="@+id/hole3score"
         android:layout_width="47dp"
         android:layout_height="57dp"
         android:layout_marginBottom="7dp"
@@ -51,7 +52,7 @@
         app:layout_constraintStart_toEndOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/total2score"
+        android:id="@+id/total3score"
         android:layout_width="37dp"
         android:layout_height="32dp"
         android:layout_marginTop="16dp"
@@ -71,9 +72,9 @@
         android:text="|"
         android:textSize="36sp"
         android:textColor="@color/black"
-        app:layout_constraintBaseline_toBaselineOf="@+id/hole2score"
-        app:layout_constraintEnd_toStartOf="@+id/total2score"
-        app:layout_constraintStart_toEndOf="@+id/hole2score" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/hole3score"
+        app:layout_constraintEnd_toStartOf="@+id/total3score"
+        app:layout_constraintStart_toEndOf="@+id/hole3score" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -82,7 +83,7 @@
         android:layout_marginEnd="80dp"
         android:layout_marginRight="80dp"
         app:layout_constraintBottom_toBottomOf="@+id/shape"
-        app:layout_constraintEnd_toStartOf="@+id/hole2score"
+        app:layout_constraintEnd_toStartOf="@+id/hole3score"
         app:layout_constraintStart_toEndOf="@+id/player2name"
         app:layout_constraintTop_toTopOf="@+id/shape"
         tools:srcCompat="@tools:sample/avatars" />

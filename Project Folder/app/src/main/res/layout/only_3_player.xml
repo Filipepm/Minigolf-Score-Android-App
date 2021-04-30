@@ -3,28 +3,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/new_saved_background">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="57dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:background="#00FFFFFF"
+        android:text="Button"
+        app:backgroundTint="#00FFFFFF"
+        app:backgroundTintMode="add"
+        app:icon="@drawable/ic_home_button"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/add_player_btn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="204dp"
+        android:layout_marginBottom="120dp"
         android:background="@color/teal_200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/ic_menu_add" />
 
     <TextView
         android:id="@+id/holenumber2"
-        android:layout_width="43dp"
+        android:layout_width="71dp"
         android:layout_height="93dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/varela_regular"
         android:text="1"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="80sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +53,7 @@
         android:layout_marginTop="48dp"
         android:fontFamily="@font/varela_regular"
         android:text="Hole Number"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -65,4 +81,31 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/prev_hole"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginBottom="80dp"
+        app:backgroundTint="#121212"
+        app:backgroundTintMode="add"
+        app:icon="@drawable/ic_baseline_arrow_back_ios_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/next_hole"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="80dp"
+        app:backgroundTint="#121212"
+        app:backgroundTintMode="add"
+        app:icon="@drawable/ic_baseline_arrow_forward_ios_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

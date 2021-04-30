@@ -21,6 +21,13 @@
         <activity android:name=".NewGame"></activity>
         <activity android:name=".SavedGame"></activity>
         <activity android:name=".AddPlayer"></activity>
+        <activity android:name=".EmptyGame"></activity>
+        <activity android:name=".Only1Player"></activity>
+        <activity android:name=".Only2Player"></activity>
+        <activity android:name=".Only3Player"></activity>
+        <activity android:name=".Player1Add"></activity>
+        <activity android:name=".Player2Add"></activity>
+        <activity android:name=".Player3Add"></activity>
     </application>
 
 </manifest>

@@ -6,6 +6,21 @@
     android:layout_height="match_parent"
     android:background="@color/new_saved_background">
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="57dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:background="#00FFFFFF"
+        android:text="Button"
+        app:backgroundTint="#00FFFFFF"
+        app:backgroundTintMode="add"
+        app:icon="@drawable/ic_home_button"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/NameLabel"
         android:layout_width="wrap_content"

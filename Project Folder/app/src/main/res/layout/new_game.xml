@@ -4,31 +4,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/new_saved_background">
 
-    <TextView
-        android:id="@+id/PlayerNumLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="104dp"
-        android:text="Number of Players:"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/PersonNumInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
-        app:layout_constraintStart_toEndOf="@+id/PlayerNumLabel"
-        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+    android:id="@+id/button"
+    android:layout_width="57dp"
+    android:layout_height="52dp"
+    android:layout_marginEnd="3dp"
+    android:layout_marginRight="3dp"
+    android:background="#00FFFFFF"
+    android:text="Button"
+    app:backgroundTint="#00FFFFFF"
+    app:backgroundTintMode="add"
+    app:icon="@drawable/ic_home_button"
+    app:iconTint="#FFFFFF"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/ParNumLabel"
@@ -37,7 +29,8 @@
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
         android:layout_marginBottom="188dp"
-        android:text="Number of Pars:"
+        android:text="Number of Holes:"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/NewGameSubmit"
         app:layout_constraintStart_toStartOf="parent" />
@@ -49,6 +42,8 @@
         android:layout_marginBottom="180dp"
         android:ems="10"
         android:inputType="number"
+        android:textColor="#000000"
+        android:background="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/NewGameSubmit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.542"

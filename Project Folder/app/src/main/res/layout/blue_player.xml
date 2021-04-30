@@ -38,7 +38,7 @@
         app:layout_constraintTop_toTopOf="@+id/shape" />
 
     <EditText
-        android:id="@+id/hole2score"
+        android:id="@+id/hole1score"
         android:layout_width="47dp"
         android:layout_height="57dp"
         android:layout_marginBottom="7dp"
@@ -51,7 +51,7 @@
         app:layout_constraintStart_toEndOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/total2score"
+        android:id="@+id/total1score"
         android:layout_width="37dp"
         android:layout_height="32dp"
         android:layout_marginTop="16dp"
@@ -71,9 +71,9 @@
         android:text="|"
         android:textSize="36sp"
         android:textColor="@color/black"
-        app:layout_constraintBaseline_toBaselineOf="@+id/hole2score"
-        app:layout_constraintEnd_toStartOf="@+id/total2score"
-        app:layout_constraintStart_toEndOf="@+id/hole2score" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/hole1score"
+        app:layout_constraintEnd_toStartOf="@+id/total1score"
+        app:layout_constraintStart_toEndOf="@+id/hole1score" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -82,7 +82,7 @@
         android:layout_marginEnd="80dp"
         android:layout_marginRight="80dp"
         app:layout_constraintBottom_toBottomOf="@+id/shape"
-        app:layout_constraintEnd_toStartOf="@+id/hole2score"
+        app:layout_constraintEnd_toStartOf="@+id/hole1score"
         app:layout_constraintStart_toEndOf="@+id/player2name"
         app:layout_constraintTop_toTopOf="@+id/shape"
         tools:srcCompat="@tools:sample/avatars" />

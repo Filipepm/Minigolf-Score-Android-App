@@ -23,8 +23,8 @@ public class Hole2 extends AppCompatActivity {
 
         hole1score = (EditText) findViewById(R.id.hole1score);
         hole1total = (TextView) findViewById(R.id.total1score);
-        hole2score = (EditText) findViewById(R.id.hole2score);
-        hole2total = (TextView) findViewById(R.id.total2score);
+        hole2score = (EditText) findViewById(R.id.hole1score);
+        hole2total = (TextView) findViewById(R.id.total1score);
         holenumber = (TextView) findViewById(R.id.holenumber);
 
         hole1total.setText("2");
