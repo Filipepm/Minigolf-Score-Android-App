@@ -32,7 +32,7 @@ public class NewGame extends AppCompatActivity {
                 final int maxplayers = Integer.parseInt(num);
                 game.setMaxPlayerID(maxplayers);
 
-                Intent i = new Intent(NewGame.this, MainActivity.class);
+                Intent i = new Intent(NewGame.this, EmptyGame.class);
                 startActivity(i);
             }
         });

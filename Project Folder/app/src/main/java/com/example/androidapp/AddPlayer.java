@@ -41,7 +41,7 @@ public class AddPlayer extends AppCompatActivity {
         purple = (RadioButton) findViewById(R.id.purpleButton);
         submit = (Button) findViewById(R.id.NewPlayerSubmit);
 
-        final ListView list = findViewById(R.id.playerlist);
+        //final ListView list = findViewById(R.id.playerlist);
         //final ArrayAdapter<Player> adapter = new ArrayAdapter<>(AddPlayer.this, android.R.layout.simple, list);
 
         submit.setOnClickListener(new View.OnClickListener() {
