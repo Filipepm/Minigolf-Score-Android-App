@@ -1,4 +1,4 @@
-package golfstonks;
+package com.example.androidapp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,17 +7,17 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Player1Add extends AppCompatActivity {
+public class Player3Add extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.add_player1);
+        setContentView(R.layout.add_player3);
 
         Button submit = findViewById(R.id.NewPlayerSubmit);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Player1Add.this, Only1Player.class));
+                startActivity(new Intent(Player3Add.this, Only3Player.class));
             }
         });
     }

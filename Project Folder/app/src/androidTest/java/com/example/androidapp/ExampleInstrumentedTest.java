@@ -1,4 +1,4 @@
-package com.example.golfstonks;
+package com.example.androidapp;
 
 import android.content.Context;
 
