@@ -1,4 +1,4 @@
-package com.example.androidapp;
+package com.golfstonks.androidapp;
 
 import android.content.Intent;
 import android.os.Bundle;

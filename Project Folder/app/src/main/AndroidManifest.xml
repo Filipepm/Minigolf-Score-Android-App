@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.androidapp">
+    package="com.golfstonks.androidapp">
 
     <application
         android:allowBackup="true"
@@ -9,25 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidApp">
-        <activity android:name=".HomePage">
+        <activity android:name="com.golfstonks.androidapp.HomePage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".Hole2"></activity>
-        <activity android:name=".NewGame"></activity>
-        <activity android:name=".SavedGame"></activity>
-        <activity android:name=".AddPlayer"></activity>
-        <activity android:name=".EmptyGame"></activity>
-        <activity android:name=".Only1Player"></activity>
-        <activity android:name=".Only2Player"></activity>
-        <activity android:name=".Only3Player"></activity>
-        <activity android:name=".Player1Add"></activity>
-        <activity android:name=".Player2Add"></activity>
-        <activity android:name=".Player3Add"></activity>
+        <activity android:name="com.golfstonks.androidapp.MainActivity"></activity>
+        <activity android:name="com.golfstonks.androidapp.Hole2"></activity>
+        <activity android:name="com.golfstonks.androidapp.NewGame"></activity>
+        <activity android:name="com.golfstonks.androidapp.SavedGame"></activity>
+        <activity android:name="com.golfstonks.androidapp.AddPlayer"></activity>
+        <activity android:name="com.golfstonks.androidapp.EmptyGame"></activity>
+        <activity android:name="com.golfstonks.androidapp.Only1Player"></activity>
+        <activity android:name="com.golfstonks.androidapp.Only2Player"></activity>
+        <activity android:name="com.golfstonks.androidapp.Only3Player"></activity>
+        <activity android:name="com.golfstonks.androidapp.Player1Add"></activity>
+        <activity android:name="com.golfstonks.androidapp.Player2Add"></activity>
+        <activity android:name="com.golfstonks.androidapp.Player3Add"></activity>
     </application>
 
 </manifest>
