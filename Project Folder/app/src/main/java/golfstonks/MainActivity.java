@@ -1,15 +1,15 @@
-package com.example.androidapp;
-
+package golfstonks;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SavedGame extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.saved_game);
+        setContentView(R.layout.activity_main);
+
     }
 }

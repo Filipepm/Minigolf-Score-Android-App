@@ -1,4 +1,4 @@
-package com.example.androidapp;
+package com.example.golfstonks;
 
 import org.junit.Test;
 
